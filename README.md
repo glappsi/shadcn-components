@@ -1,17 +1,40 @@
-# shadcn/ui
+# shadcn/extension
 
-Accessible and customizable components that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
+This is a custom extension providing additional components based on shadcn.
 
-![hero](apps/www/public/og.jpg)
+## Components
 
-## Documentation
+### Multi Select
 
-Visit http://ui.shadcn.com/docs to view the documentation.
+A multi select input field using `command` and `badge` shadcn components.
 
-## Contributing
+#### Properties
+```typescript
+type MultiSelectItem = Record<"value" | "label", string> & {
+  readonly?: boolean
+}
 
-Please read the [contributing guide](/CONTRIBUTING.md).
+type Props = {
+  items: MultiSelectItem[]
+  actions?: MultiSelectItem[]
+  onValueChange: (value: string[]) => void
+  onActionSelected?: (value: string) => void
+  defaultValue?: string[]
+  placeholder: string
+  variant?: BadgeProps["variant"]
+}
+```
 
-## License
+#### Installation
+```bash
+# Install default themed
+npx shadcn@latest add "https://raw.githubusercontent.com/glappsi/shadcn-components/refs/heads/main/apps/www/public/r/styles/default/multi-select.json"
+```
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+```bash
+# Install new-york themed
+npx shadcn@latest add "https://raw.githubusercontent.com/glappsi/shadcn-components/refs/heads/main/apps/www/public/r/styles/new-york/multi-select.json"
+```
+
+#### Preview
+Find a preview on my portfolio page: https://www.glappa.dev/projects
