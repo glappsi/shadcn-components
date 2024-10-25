@@ -26,13 +26,14 @@ type Props = {
 ```
 
 #### Installation
+
+**default theme**
 ```bash
-# Install default themed
 npx shadcn@latest add "https://raw.githubusercontent.com/glappsi/shadcn-components/refs/heads/main/apps/www/public/r/styles/default/multi-select.json"
 ```
 
+**new-york theme**
 ```bash
-# Install new-york themed
 npx shadcn@latest add "https://raw.githubusercontent.com/glappsi/shadcn-components/refs/heads/main/apps/www/public/r/styles/new-york/multi-select.json"
 ```
 
